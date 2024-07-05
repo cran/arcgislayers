@@ -3,6 +3,7 @@
 \name{clear_query}
 \alias{clear_query}
 \alias{list_fields}
+\alias{pull_field_aliases}
 \alias{list_items}
 \alias{refresh_layer}
 \title{Utility functions}
@@ -10,6 +11,8 @@
 clear_query(x)
 
 list_fields(x)
+
+pull_field_aliases(x)
 
 list_items(x)
 
@@ -33,33 +36,33 @@ Utility functions
 \item \code{refresh_layer()} syncs a \code{FeatureLayer} or \code{Table} with the remote
 resource picking up any changes that may have been made upstream.
 Returns an object of class \code{x}.
+\item \code{pull_field_aliases()} returns a named list of the field aliases from a \code{FeatureLayer} or \code{Table}
 }
 }
 \examples{
 \dontrun{
-  furl <- paste0(
-    "https://services3.arcgis.com/ZvidGQkLaDJxRSJ2/arcgis/rest/services/",
-    "PLACES_LocalData_for_BetterHealth/FeatureServer/0"
-  )
+furl <- paste0(
+  "https://services3.arcgis.com/ZvidGQkLaDJxRSJ2/arcgis/rest/services/",
+  "PLACES_LocalData_for_BetterHealth/FeatureServer/0"
+)
 
-  flayer <- arc_open(furl)
+flayer <- arc_open(furl)
 
-  # list fields available in a layer
-  list_fields(flayer)
+# list fields available in a layer
+list_fields(flayer)
 
-  # remove any queries stored in the query attribute
-  clear_query(update_params(flayer, outFields = "*"))
+# remove any queries stored in the query attribute
+clear_query(update_params(flayer, outFields = "*"))
 
-  # refresh metadata of an object
-  refresh_layer(flayer)
+# refresh metadata of an object
+refresh_layer(flayer)
 
-  map_url <- paste0(
-    "https://services.arcgisonline.com/ArcGIS/rest/services/",
-    "World_Imagery/MapServer"
-  )
+map_url <- paste0(
+  "https://services.arcgisonline.com/ArcGIS/rest/services/",
+  "World_Imagery/MapServer"
+)
 
-  # list all items in a server object
-  list_items(arc_open(map_url))
-
+# list all items in a server object
+list_items(arc_open(map_url))
 }
 }

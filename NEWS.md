@@ -1,3 +1,18 @@
+# arcgislayers 0.3.1
+
+## Bug fixes
+
+- `page_size` resulted in error due to introduction of type-check. Fixed and added test to avoid in the future.  [#205](https://github.com/R-ArcGIS/arcgislayers/issues/205)
+- Add warning if `arc_select()` results include fewer features than expected from request [#220](https://github.com/R-ArcGIS/arcgislayers/issues/220)
+
+## New features
+
+- `arc_raster()` gains an argument `raster_fn` which takes a character scalar and performs a raster function server side before returning results
+- `list_service_raster_fns()` is a new helper function to list available raster functions for an `ImageServer`
+- `arc_open()` ignores queries included in input URLs and retains any custom queries in the `query` attribute for `Table` and `FeatureLayer`s. ([#215](https://github.com/R-ArcGIS/arcgislayers/issues/215))
+
+## Breaking changes 
+
 # arcgislayers 0.3.0
 
 - `arc_open()` will now work on any resource that works when `f=json` is set in the query parameters closes [#163](https://github.com/R-ArcGIS/arcgislayers/issues/163)

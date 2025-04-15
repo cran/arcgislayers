@@ -1,3 +1,24 @@
+# arcgislayers 0.4.0
+
+
+## New features
+
+- Address bug in JSON parsing by bumping the version of RcppSimdJson
+- Improve handling of `filter_geom` by `arc_select()` by warning if applying `sf::st_union()` to the filter does not generate a length 1 sfc, or if `filter_geom` is supplied when accessing a Table, or if `filter_geom` is empty (@elipousson, #166)
+- Export `set_layer_aliases()` (previously used internally by `arc_read()`) to allow use of alias values with data returned by `arc_select()` (#169).
+- Add new `encode_field_values()` function to support replacement or labeling of values with coded value domains (#134).
+- Improve input checks for `get_layer()`, `get_all_layers()`, and `get_layers()` to require FeatureServer, MapServer, or GroupLayer input objects.
+
+## Bug fixes
+
+- Adjusts `arc_select()` to not error out when `query` capability isn't explicitly listed. Instead `cli_alert_danger()` is used to communicate the issue <https://github.com/R-ArcGIS/arcgislayers/pull/230>
+- `arc_select()` includes argument name in error message when `...` contains non-string values. <https://github.com/R-ArcGIS/arcgislayers/issues/226>
+
+## Breaking changes
+
+- `dplyr` methods for `collect()`, `select()`, and `filter()` have been removed. <https://github.com/R-ArcGIS/arcgislayers/issues/111> <https://github.com/R-ArcGIS/arcgislayers/issues/224> <https://github.com/R-ArcGIS/arcgislayers/issues/218>
+- Soft deprecate `arc_read(col_names = "alias")` (use `arc_read(alias = "replace")` instead)
+
 # arcgislayers 0.3.1
 
 ## Bug fixes

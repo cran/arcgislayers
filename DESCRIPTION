@@ -1,7 +1,7 @@
-Package: arcgislayers
 Type: Package
-Title: An Interface to ArcGIS Data Services
-Version: 0.4.0
+Package: arcgislayers
+Title: Harness ArcGIS Data Services
+Version: 0.5.0
 Authors@R: c(
     person("Josiah", "Parry", , "josiah.parry@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-9910-865X")),
@@ -10,30 +10,34 @@ Authors@R: c(
     person("Kenneth", "Vernon", , "kenneth.b.vernon@gmail.com", role = "ctb",
            comment = c(ORCID = "0000-0003-0098-5092")),
     person("Martha", "Bass", role = "ctb",
-           comment = c(ORCID = "0009-0004-0268-5426"))
+           comment = c(ORCID = "0009-0004-0268-5426")),
+    person("Antony", "Barja", role = "ctb",
+           comment = c(ORCID = "0000-0001-5921-2858"))
   )
 Description: Enables users of 'ArcGIS Enterprise', 'ArcGIS Online', or
     'ArcGIS Platform' to read, write, publish, or manage vector and raster
     data via ArcGIS location services REST API endpoints
     <https://developers.arcgis.com/rest/>.
 License: Apache License (>= 2)
-Encoding: UTF-8
-Imports: arcgisutils (>= 0.2.0), arcpbf (>= 0.1.5), cli, httr2 (>=
-        1.0.5), jsonify, lifecycle, RcppSimdJson (>= 0.1.13), rlang,
-        sf, terra, utils
-RoxygenNote: 7.3.2
-Suggests: dbplyr, dplyr, rmarkdown, testthat (>= 3.0.0), tidyselect,
-        vctrs
-Config/testthat/edition: 3
 URL: https://developers.arcgis.com/r-bridge,
         https://github.com/R-ArcGIS/arcgislayers
 BugReports: https://github.com/R-ArcGIS/arcgislayers/issues
+Depends: R (>= 4.2.0)
+Imports: arcgisutils (>= 0.4.0), arcpbf (>= 0.1.5), cli, httr2 (>=
+        1.0.5), jsonify, lifecycle, RcppSimdJson (>= 0.1.13), rlang,
+        sf, terra, utils
+Suggests: testthat (>= 3.0.0), vctrs, curl, dplyr
+Config/testthat/edition: 3
+Encoding: UTF-8
+RoxygenNote: 7.3.2
 NeedsCompilation: no
-Packaged: 2025-04-15 19:02:53 UTC; josiahparry
-Author: Josiah Parry [aut, cre] (<https://orcid.org/0000-0001-9910-865X>),
-  Eli Pousson [ctb] (<https://orcid.org/0000-0001-8280-1706>),
-  Kenneth Vernon [ctb] (<https://orcid.org/0000-0003-0098-5092>),
-  Martha Bass [ctb] (<https://orcid.org/0009-0004-0268-5426>)
+Packaged: 2025-09-18 19:15:04 UTC; josiahparry
+Author: Josiah Parry [aut, cre] (ORCID:
+    <https://orcid.org/0000-0001-9910-865X>),
+  Eli Pousson [ctb] (ORCID: <https://orcid.org/0000-0001-8280-1706>),
+  Kenneth Vernon [ctb] (ORCID: <https://orcid.org/0000-0003-0098-5092>),
+  Martha Bass [ctb] (ORCID: <https://orcid.org/0009-0004-0268-5426>),
+  Antony Barja [ctb] (ORCID: <https://orcid.org/0000-0001-5921-2858>)
 Maintainer: Josiah Parry <josiah.parry@gmail.com>
 Repository: CRAN
-Date/Publication: 2025-04-15 19:20:08 UTC
+Date/Publication: 2025-09-19 05:10:27 UTC

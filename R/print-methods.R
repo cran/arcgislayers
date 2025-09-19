@@ -49,7 +49,7 @@ print.Table <- function(x, ...) {
 
 #' @export
 head.Table <- function(x, n = 6, token = arc_token(), ...) {
-  collect_layer(x, n, token)
+  arc_select(x, n_max = n, token = token, ...)
 }
 
 # Feature Layer -----------------------------------------------------------
@@ -95,7 +95,7 @@ print.FeatureLayer <- function(x, ...) {
 #' @importFrom utils head
 #' @export
 head.FeatureLayer <- function(x, n = 6, token = arc_token(), ...) {
-  collect_layer(x, n, token)
+  arc_select(x, n_max = n, token = token, ...)
 }
 
 
@@ -121,7 +121,7 @@ print.FeatureServer <- function(x, n, ...) {
 
   header <- sprintf(
     "<%s <%s, %s>>",
-    class(x),
+    class(x)[1],
     fts_lbl,
     tbls_lbl
   )
@@ -197,7 +197,7 @@ print.MapServer <- function(x, ...) print.FeatureServer(x, ...)
 print.ImageServer <- function(x, ...) {
   header <- sprintf(
     "<%s <%i bands, %i fields>>",
-    class(x),
+    class(x)[1],
     x$bandCount,
     length(x$fields$name) %||% 0
   )

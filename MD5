@@ -1,4 +1,4 @@
-8b84d4eb1c205e79e3b904427ae4f618 *DESCRIPTION
+28fe06431e7c7771d75e56ec7a44fc7f *DESCRIPTION
 7c6c858d28d077e632cfec412b63511a *NAMESPACE
 8f1fba421dd91c0aa3f44bddcc19fe0e *NEWS.md
 37b69557c811f43ed7cc8922ac2a2020 *R/add_item.R
@@ -7,16 +7,16 @@
 bcdc254004b6db7fc6d6ac1c2db70b5f *R/arc-open.R
 acce6a1e4eeefb3772db7565a6c4bc4d *R/arc-raster.R
 e1e0124551f88e3f4ff807b868181f32 *R/arc-read.R
-c40865250065ac4a912208dc90c2cadf *R/arc-select.R
+57ce45a45a890c8c358ff42a61243bbc *R/arc-select.R
 ecd4438b917a8a36d3001e0fc07bba98 *R/arcgislayers-package.R
 79fe93b1a8443e2bf7aabbb91d82d1f8 *R/attachments.R
 5194cf7366c5ae849491a1cee91f6f6c *R/create-service.R
-7a489f6155443f163ce36dcee804a7a9 *R/get-estimates.R
+49325232bfd0a9859a7c6517e52b34bb *R/get-estimates.R
 4a65d3a408fa60b54ae2d6b34bb9d532 *R/import-standalone-obj-type.R
 48e8bba85a342c371c195aeb2aa51c86 *R/import-standalone-types-check.R
 668f18efe88136bc638c02c4e58ea099 *R/print-methods.R
 d877cd1a5b3d9f3a3a7fbc9290d4c4a6 *R/raster-fns.R
-f515e75e882277fb00eaaf1c9332fbd9 *R/sf-methods.R
+4fc62de416226e7e66dffcb0c4395ceb *R/sf-methods.R
 a54cd9cfb12bd89adc848c5012c44f8e *R/truncate.R
 21aa40acd3842712b9690bdab14de6ff *R/update-attachments.R
 ac2b1963fdf182f82811ac967c8425df *R/update-features.R
@@ -44,7 +44,7 @@ ed42e3fbd7cc30bc6ca8fa9b658e24a8 *man/figures/lifecycle-stable.svg
 bf2f1ad432ecccee3400afe533404113 *man/figures/lifecycle-superseded.svg
 fab8cd5d90feacd9f26f7ca9bdc55b41 *man/figures/logo.svg
 adce5272d5dd869940ae9235ea452a92 *man/get_layer.Rd
-7e89e3cd7d6ca286392cc09b0e3b8ef5 *man/get_layer_estimates.Rd
+690260db97eb83359780dfc9b8efba6c *man/get_layer_estimates.Rd
 d01c0d78bcb9d47a7a1d0256e8392e12 *man/modify.Rd
 c5a5b982f342766146cd4f9246eedc6e *man/publish.Rd
 fa80c4c7810c6e1eeab956fc1424a04c *man/raster_fns.Rd
